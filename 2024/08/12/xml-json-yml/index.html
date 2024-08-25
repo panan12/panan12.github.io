@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>配置与数据格式学习笔记 - 小杰的博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="FPGA, matlab, linux,"> 
+    <meta name="description" content="欢迎来到小杰的博客,配置与数据格式学习笔记YAML 基本语法入门指南YAML 是一种简洁且人类可读的数据序列化格式，常用于配置文件和数据交换。在这篇文章中，我们将一步一步地介绍 YAML 的基本语法。
+1. 什么是 Y,"> 
+    <meta name="author" content="小杰"> 
+    <link rel="alternative" href="atom.xml" title="小杰的博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/htop.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">小杰的博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/htop.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">配置与数据格式学习笔记</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/8PAS4Gh5.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
+                
+                八月 12, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/08/12/xml-json-yml/" title="配置与数据格式学习笔记" class="">配置与数据格式学习笔记</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                    18k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                    17 mins.
+                </span>
+                
+                
+                <span id="/2024/08/12/xml-json-yml/" class="leancloud_visitors" data-flag-title="配置与数据格式学习笔记">
+                    <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                    <span class="leancloud-visitors-count">1000000</span>
+                </span>
+                
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/JSON/" rel="tag">JSON</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/XML/" rel="tag">XML</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/YAML/" rel="tag">YAML</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h2 id="配置与数据格式学习笔记"><a href="#配置与数据格式学习笔记" class="headerlink" title="配置与数据格式学习笔记"></a>配置与数据格式学习笔记</h2><h3 id="YAML-基本语法入门指南"><a href="#YAML-基本语法入门指南" class="headerlink" title="YAML 基本语法入门指南"></a>YAML 基本语法入门指南</h3><p>YAML 是一种简洁且人类可读的数据序列化格式，常用于配置文件和数据交换。在这篇文章中，我们将一步一步地介绍 YAML 的基本语法。</p>
+<h4 id="1-什么是-YAML？"><a href="#1-什么是-YAML？" class="headerlink" title="1. 什么是 YAML？"></a>1. 什么是 YAML？</h4><p>YAML 是一种直观的、基于缩进的语言，用来表示数据结构，类似于 JSON 和 XML。它广泛用于配置文件（如 Docker、Kubernetes、Ansible 等工具），因为它更易读和易写。</p>
+<h4 id="2-YAML-基本结构"><a href="#2-YAML-基本结构" class="headerlink" title="2. YAML 基本结构"></a>2. YAML 基本结构</h4><p><strong>键值对</strong></p>
+<p>YAML 的基础是键值对，每一对键值之间用冒号 <code>:</code> 隔开：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">John</span> <span class="string">Doe</span></span><br><span class="line"><span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>缩进和层级结构</strong></p>
+<p>YAML 使用缩进来表示层级关系。通常使用两个空格进行缩进（Tab 缩进不是标准的做法）：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">John</span> <span class="string">Doe</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br><span class="line">  <span class="attr">contact:</span></span><br><span class="line">    <span class="attr">email:</span> <span class="string">john.doe@example.com</span></span><br><span class="line">    <span class="attr">phone:</span> <span class="number">123</span><span class="number">-456</span><span class="number">-7890</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>列表</strong></p>
+<p>使用破折号 <code>-</code> 来表示列表项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fruits:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Apple</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Orange</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Banana</span></span><br></pre></td></tr></table></figure>
+
+<p>等同于：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fruits:</span> [<span class="string">Apple</span>, <span class="string">Orange</span>, <span class="string">Banana</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>字典（Map）</strong></p>
+<p>字典是一组键值对，表示为嵌套的层级结构：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">John</span> <span class="string">Doe</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br><span class="line">  <span class="attr">address:</span></span><br><span class="line">    <span class="attr">street:</span> <span class="number">123</span> <span class="string">Main</span> <span class="string">St</span></span><br><span class="line">    <span class="attr">city:</span> <span class="string">Anytown</span></span><br><span class="line">    <span class="attr">zip:</span> <span class="number">12345</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-注释"><a href="#3-注释" class="headerlink" title="3. 注释"></a>3. 注释</h4><p>在 YAML 文件中，使用 <code>#</code> 来添加注释：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是一个注释</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">John</span> <span class="string">Doe</span>  <span class="comment"># 键值对旁边的注释</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4. 数据类型"></a>4. 数据类型</h4><p><strong>字符串</strong></p>
+<p>字符串可以用引号包裹，也可以不使用引号：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">single:</span> <span class="string">&#x27;这是一个单引号字符串&#x27;</span></span><br><span class="line"><span class="attr">double:</span> <span class="string">&quot;这是一个双引号字符串&quot;</span></span><br><span class="line"><span class="attr">no_quotes:</span> <span class="string">无引号字符串</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>数值</strong></p>
+<p>数值可以是整数或浮点数：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">integer:</span> <span class="number">42</span></span><br><span class="line"><span class="attr">float:</span> <span class="number">3.14</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>布尔值</strong></p>
+<p>布尔值可以用 <code>true</code>&#x2F;<code>false</code> 或 <code>yes</code>&#x2F;<code>no</code> 表示：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">is_active:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">is_admin:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">is_verified:</span> <span class="literal">yes</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>日期</strong></p>
+<p>日期可以直接写在 YAML 文件中：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">birthday:</span> <span class="number">2024-08-12</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JSON-入门教程"><a href="#JSON-入门教程" class="headerlink" title="JSON 入门教程"></a>JSON 入门教程</h3><p>JSON（JavaScript Object Notation） 是一种轻量级的数据交换格式。它易于人阅读和编写，同时也易于机器解析和生成。JSON 是独立于语言的，意味着不仅限于 JavaScript，它在很多编程语言中都有支持。</p>
+<h4 id="1-JSON-的基本语法"><a href="#1-JSON-的基本语法" class="headerlink" title="1. JSON 的基本语法"></a>1. JSON 的基本语法</h4><p>JSON 数据是由键值对组成的。它有以下几个基本的语法元素：</p>
+<ul>
+<li><strong>对象（Object）</strong> : 使用大括号 <code>&#123;&#125;</code> 包含，内部包含一个或多个键值对（键和值之间使用冒号 <code>:</code> 分隔，键值对之间用逗号 <code>,</code> 分隔）。</li>
+<li><strong>数组（Array）</strong> : 使用方括号 <code>[]</code> 包含，内部包含一个或多个值，值之间使用逗号 <code>,</code> 分隔。</li>
+<li><strong>值（Value）</strong> : 可以是字符串、数值、布尔值、对象、数组或 <code>null</code>。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Alice&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">25</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;isStudent&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;courses&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;Mathematics&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Physics&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Computer Science&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;address&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;city&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Beijing&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;postalCode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;100000&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;phoneNumbers&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-JSON-与-JavaScript-的关系"><a href="#2-JSON-与-JavaScript-的关系" class="headerlink" title="2. JSON 与 JavaScript 的关系"></a>2. JSON 与 JavaScript 的关系</h4><ul>
+<li>JSON 中的键必须使用双引号 <code>&quot;&quot;</code> 括起来，而 JavaScript 对象中不要求键必须使用引号。</li>
+<li>JSON 不支持函数、日期对象等 JavaScript 特有的数据类型。</li>
+</ul>
+<h4 id="3-在-JavaScript-中使用-JSON"><a href="#3-在-JavaScript-中使用-JSON" class="headerlink" title="3. 在 JavaScript 中使用 JSON"></a>3. 在 JavaScript 中使用 JSON</h4><p>JavaScript 提供了两个方法来处理 JSON 数据：</p>
+<ul>
+<li><code>JSON.stringify()</code> ：将 JavaScript 对象转换为 JSON 字符串。</li>
+<li><code>JSON.parse()</code> ：将 JSON 字符串解析为 JavaScript 对象。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> student = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">25</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> jsonString = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(student);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jsonString); </span><br><span class="line"><span class="comment">// 输出: &#123;&quot;name&quot;:&quot;Alice&quot;,&quot;age&quot;:25,&quot;isStudent&quot;:true&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> jsonObject = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(jsonString);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jsonObject.<span class="property">name</span>); </span><br><span class="line"><span class="comment">// 输出: Alice</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="XML-语法介绍"><a href="#XML-语法介绍" class="headerlink" title="XML 语法介绍"></a>XML 语法介绍</h3><p>XML 是一种广泛用于数据传输和存储的标记语言。它的结构严谨且易于解析，常用于配置文件、文档和数据交换格式。</p>
+<h4 id="1-XML-文档结构"><a href="#1-XML-文档结构" class="headerlink" title="1. XML 文档结构"></a>1. XML 文档结构</h4><p>一个标准的 XML 文档由两部分组成：声明部分和元素部分。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">root</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- XML 内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>XML 声明</strong>：是 XML 的声明部分，用于指定 XML 版本和字符编码。</li>
+<li><strong>根元素</strong>：每个 XML 文档必须包含一个根元素，所有其他元素都是这个根元素的子元素。</li>
+</ul>
+<h4 id="2-元素（Element）"><a href="#2-元素（Element）" class="headerlink" title="2. 元素（Element）"></a>2. 元素（Element）</h4><p>元素是 XML 的基本构成单元。每个元素使用一对标签（开始标签和结束标签）包围内容。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>Alice<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-属性（Attribute）"><a href="#3-属性（Attribute）" class="headerlink" title="3. 属性（Attribute）"></a>3. 属性（Attribute）</h4><p>XML 元素可以包含属性，用于提供附加信息。属性以键值对的形式出现在开始标签内。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">student</span> <span class="attr">name</span>=<span class="string">&quot;Alice&quot;</span> <span class="attr">age</span>=<span class="string">&quot;25&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-嵌套元素（Nested-Elements）"><a href="#4-嵌套元素（Nested-Elements）" class="headerlink" title="4. 嵌套元素（Nested Elements）"></a>4. 嵌套元素（Nested Elements）</h4><p>XML 元素可以包含其他元素，构成了 XML 文档的层次结构。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">address</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">street</span>&gt;</span>123 Main St<span class="tag">&lt;/<span class="name">street</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">city</span>&gt;</span>Beijing<span class="tag">&lt;/<span class="name">city</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">postalCode</span>&gt;</span>100000<span class="tag">&lt;/<span class="name">postalCode</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-空元素（Empty-Element）"><a href="#5-空元素（Empty-Element）" class="headerlink" title="5. 空元素（Empty Element）"></a>5. 空元素（Empty Element）</h4><p>有些元素不包含内容，可以使用自闭合标签。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">lineBreak</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="6-注释（Comments）"><a href="#6-注释（Comments）" class="headerlink" title="6. 注释（Comments）"></a>6. 注释（Comments）</h4><p>XML 中的注释使用 <code>&lt;!-- --&gt;</code> 包围。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 这是一个注释 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="7-CDATA-区域"><a href="#7-CDATA-区域" class="headerlink" title="7. CDATA 区域"></a>7. CDATA 区域</h4><p>CDATA（Character Data，字符数据）用于包含不被 XML 解析器解析的文本数据。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">message</span>&gt;</span>&lt;![CDATA[This is a &lt;CDATA&gt; section.]]&gt;<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="部署和使用"><a href="#部署和使用" class="headerlink" title="部署和使用"></a>部署和使用</h3><ol>
+<li><p><strong>将 Markdown 文件保存到 Hexo 博客</strong>：</p>
+<ul>
+<li>将上述内容复制到一个新的 Markdown 文件中，比如 <code>source/_posts/data-format-study.md</code>。</li>
+</ul>
+</li>
+<li><p><strong>生成和部署博客</strong>：</p>
+<ul>
+<li>在你的 Hexo 项目根目录中，运行以下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>查看博客</strong>：</p>
+<ul>
+<li>部署完成后，在浏览器中查看你的网站，应该能够看到新添加的 YAML、JSON、XML 学习笔记。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://yaml.org/">YAML 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.json.org/">JSON 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3.org/XML/">XML 官方文档</a></li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='your-client-id'
+        data-cs='your-client-secret'
+        data-r='your-repo-name'
+        data-o='your-github-username'
+        data-a='your-github-username'
+        data-d=''
+        data-p=''
+    >留言</div>
+
+
+            
+            
+            <div id="vcomments"></div>
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/logo.png" height=300 width=300></img>
+                    <p>小杰</p>
+                    <span>The quieter you become, the more you are able to hear.</span>
+                    <dl>
+                        
+                            
+                                <dd><a href="https://github.com/your-github-username" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">17 <p>文章</p></a></li>
+                    <li><a href="/categories">0 <p>分类</p></a></li>
+                    <li><a href="/tags">21 <p>标签</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">配置与数据格式学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#YAML-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97"><span class="toc-number">1.1.</span> <span class="toc-text">YAML 基本语法入门指南</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">JSON 入门教程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XML-%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.3.</span> <span class="toc-text">XML 语法介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">部署和使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="toc-number">2.</span> <span class="toc-text">学习资源</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            小杰
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        
+        </br>
+        <span style="display: inline-block;"> <img src=/null></span>
+        
+        <span class="gradient-text">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602009049" title="www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049" target="_blank" rel="noopener">www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049</a>
+        </span>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['The quieter you become, the more you are able to hear.', '你越安静，你就越能够听见。'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+ 
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var valine = new Valine();
+
+  function initValine(path) {
+    if (!path) path = window.location.pathname;
+    let language = 'zh-CN';
+    if (!language) {
+      language = 'en';
+    } else {
+      language = language.toLowerCase();
+    }
+    valine.init({
+      el: '#vcomments',
+      appId: 'your-app-id',
+      appKey: 'your-app-key',
+      notify: 'false',
+      verify: 'false',
+      avatar: 'mp',
+      placeholder: 'Leave your thoughts behind~',
+      visitor: 'true',
+      path: path,
+      lang: language,
+    });
+  }
+
+  $(document).ready(function () {
+    initValine();
+  });
+</script>
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
