@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Python Libraries Summary - 小杰的博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="FPGA, matlab, linux,"> 
+    <meta name="description" content="欢迎来到小杰的博客,Python Libraries SummaryPython 拥有丰富且强大的库生态系统，使其成为各种应用领域的首选编程语言。以下是一些 Python 中最著名和常用的库，这些库涵盖了数据科学、机器,"> 
+    <meta name="author" content="小杰"> 
+    <link rel="alternative" href="atom.xml" title="小杰的博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/htop.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">小杰的博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/htop.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Python Libraries Summary</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/8PAS4Gh5.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
+                
+                八月 26, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/08/26/python%E7%BB%8F%E5%85%B8%E5%BA%93%E4%BD%BF%E7%94%A8/" title="Python Libraries Summary" class="">Python Libraries Summary</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                    25k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                    23 mins.
+                </span>
+                
+                
+                <span id="/2024/08/26/python经典库使用/" class="leancloud_visitors" data-flag-title="Python Libraries Summary">
+                    <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                    <span class="leancloud-visitors-count">1000000</span>
+                </span>
+                
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Libraries/" rel="tag">Libraries</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="Python-Libraries-Summary"><a href="#Python-Libraries-Summary" class="headerlink" title="Python Libraries Summary"></a>Python Libraries Summary</h1><p>Python 拥有丰富且强大的库生态系统，使其成为各种应用领域的首选编程语言。以下是一些 Python 中最著名和常用的库，这些库涵盖了数据科学、机器学习、Web 开发、自动化、图像处理等多个领域。</p>
+<h2 id="1-NumPy"><a href="#1-NumPy" class="headerlink" title="1. NumPy"></a>1. NumPy</h2><ul>
+<li><strong>读音</strong>: “Num-pie”</li>
+<li><strong>领域</strong>: 科学计算</li>
+</ul>
+<p><strong>部署</strong>:<br>在命令行中使用以下命令安装 NumPy：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个一维数组</span></span><br><span class="line">arr = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(arr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个二维数组</span></span><br><span class="line">matrix = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line"><span class="built_in">print</span>(matrix)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数组的基本运算</span></span><br><span class="line">sum_arr = arr + <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(sum_arr)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Pandas"><a href="#2-Pandas" class="headerlink" title="2. Pandas"></a>2. Pandas</h2><ul>
+<li><strong>读音</strong>: “Pan-das”</li>
+<li><strong>领域</strong>: 数据处理与分析</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Pandas：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pandas</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个数据框</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: [<span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Charlie&quot;</span>],</span><br><span class="line">    <span class="string">&quot;age&quot;</span>: [<span class="number">25</span>, <span class="number">30</span>, <span class="number">35</span>]</span><br><span class="line">&#125;</span><br><span class="line">df = pd.DataFrame(data)</span><br><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取 CSV 文件</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(df.head())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据清洗</span></span><br><span class="line">df = df.dropna()  <span class="comment"># 删除缺失值的行</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Matplotlib"><a href="#3-Matplotlib" class="headerlink" title="3. Matplotlib"></a>3. Matplotlib</h2><ul>
+<li><strong>读音</strong>: “Mat-plot-lib”</li>
+<li><strong>领域</strong>: 数据可视化</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Matplotlib：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制简单折线图</span></span><br><span class="line">plt.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">10</span>, <span class="number">20</span>, <span class="number">25</span>, <span class="number">30</span>])</span><br><span class="line">plt.title(<span class="string">&quot;Simple Plot&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;X Axis&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Y Axis&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-SciPy"><a href="#4-SciPy" class="headerlink" title="4. SciPy"></a>4. SciPy</h2><ul>
+<li><strong>读音</strong>: “Sigh-pie”</li>
+<li><strong>领域</strong>: 科学计算</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 SciPy：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scipy</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> optimize</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 SciPy 求解优化问题</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span> + <span class="number">10</span>*np.sin(x)</span><br><span class="line"></span><br><span class="line">result = optimize.minimize(func, x0=<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-Scikit-learn"><a href="#5-Scikit-learn" class="headerlink" title="5. Scikit-learn"></a>5. Scikit-learn</h2><ul>
+<li><strong>读音</strong>: “Sky-kit learn”</li>
+<li><strong>领域</strong>: 机器学习</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Scikit-learn：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scikit-learn</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_iris</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载数据集</span></span><br><span class="line">iris = load_iris()</span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=<span class="number">0.3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">model = RandomForestClassifier()</span><br><span class="line">model.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 预测</span></span><br><span class="line">predictions = model.predict(X_test)</span><br><span class="line"><span class="built_in">print</span>(predictions)</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-TensorFlow"><a href="#6-TensorFlow" class="headerlink" title="6. TensorFlow"></a>6. TensorFlow</h2><ul>
+<li><strong>读音</strong>: “Ten-sor-flow”</li>
+<li><strong>领域</strong>: 深度学习</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 TensorFlow：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建一个简单的线性模型</span></span><br><span class="line">model = tf.keras.Sequential([tf.keras.layers.Dense(units=<span class="number">1</span>, input_shape=[<span class="number">1</span>])])</span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&#x27;sgd&#x27;</span>, loss=<span class="string">&#x27;mean_squared_error&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">xs = np.array([-<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">4.0</span>], dtype=<span class="built_in">float</span>)</span><br><span class="line">ys = np.array([-<span class="number">3.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">3.0</span>, <span class="number">5.0</span>, <span class="number">7.0</span>], dtype=<span class="built_in">float</span>)</span><br><span class="line">model.fit(xs, ys, epochs=<span class="number">500</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(model.predict([<span class="number">10.0</span>]))</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-Keras"><a href="#7-Keras" class="headerlink" title="7. Keras"></a>7. Keras</h2><ul>
+<li><strong>读音</strong>: “Keh-ras”</li>
+<li><strong>领域</strong>: 深度学习</li>
+</ul>
+<p><strong>部署</strong>:<br>Keras 通常与 TensorFlow 一起安装。如果已安装 TensorFlow，则无需再次安装 Keras。</p>
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建简单的神经网络模型</span></span><br><span class="line">model = Sequential([</span><br><span class="line">    Dense(<span class="number">128</span>, activation=<span class="string">&#x27;relu&#x27;</span>, input_shape=(<span class="number">784</span>,)),</span><br><span class="line">    Dense(<span class="number">10</span>, activation=<span class="string">&#x27;softmax&#x27;</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&#x27;adam&#x27;</span>, loss=<span class="string">&#x27;sparse_categorical_crossentropy&#x27;</span>, metrics=[<span class="string">&#x27;accuracy&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-Flask"><a href="#8-Flask" class="headerlink" title="8. Flask"></a>8. Flask</h2><ul>
+<li><strong>读音</strong>: “Flask”</li>
+<li><strong>领域</strong>: Web 开发</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Flask：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install flask</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">home</span>():</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Hello, Flask!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-Django"><a href="#9-Django" class="headerlink" title="9. Django"></a>9. Django</h2><ul>
+<li><strong>读音</strong>: “Jan-go”</li>
+<li><strong>领域</strong>: Web 开发</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Django：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject mysite</span><br><span class="line"><span class="built_in">cd</span> mysite</span><br><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-Beautiful-Soup"><a href="#10-Beautiful-Soup" class="headerlink" title="10. Beautiful Soup"></a>10. Beautiful Soup</h2><ul>
+<li><strong>读音</strong>: “Beautiful Soup”</li>
+<li><strong>领域</strong>: 网页抓取</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Beautiful Soup：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install beautifulsoup4</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">response = requests.get(<span class="string">&#x27;https://example.com&#x27;</span>)</span><br><span class="line">soup = BeautifulSoup(response.content, <span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取所有的链接</span></span><br><span class="line">links = soup.find_all(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> link <span class="keyword">in</span> links:</span><br><span class="line">    <span class="built_in">print</span>(link.get(<span class="string">&#x27;href&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-Requests"><a href="#11-Requests" class="headerlink" title="11. Requests"></a>11. Requests</h2><ul>
+<li><strong>读音</strong>: “Re-quests”</li>
+<li><strong>领域</strong>: HTTP 请求</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Requests：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">response = requests.get(<span class="string">&#x27;https://api.github.com&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(response.json())</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-Pillow"><a href="#12-Pillow" class="headerlink" title="12. Pillow"></a>12. Pillow</h2><ul>
+<li><strong>读音</strong>: “Pillow”</li>
+<li><strong>领域</strong>: 图像处理</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 Pillow：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pillow</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开图像</span></span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">img.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图像缩放</span></span><br><span class="line">img = img.resize((<span class="number">128</span>, <span class="number">128</span>))</span><br><span class="line">img.save(<span class="string">&#x27;resized_image.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-PyTorch"><a href="#13-PyTorch" class="headerlink" title="13. PyTorch"></a>13. PyTorch</h2><ul>
+<li><strong>读音</strong>: “Pie-torch”</li>
+<li><strong>领域</strong>: 深度学习</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 PyTorch：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch torchvision</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个张量</span></span><br><span class="line">x = torch.tensor([<span class="number">5.5</span>, <span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过随机数初始化一个 3x3 矩阵</span></span><br><span class="line">x = torch.rand(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<h2 id="14-OpenCV"><a href="#14-OpenCV" class="headerlink" title="14. OpenCV"></a>14. OpenCV</h2><ul>
+<li><strong>读音</strong>: “Open-C-V”</li>
+<li><strong>领域</strong>: 计算机视觉</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 OpenCV：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像</span></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;image&#x27;</span>, img)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-NLTK"><a href="#15-NLTK" class="headerlink" title="15. NLTK"></a>15. NLTK</h2><ul>
+<li><strong>读音</strong>: “N-L-T-K”</li>
+<li><strong>领域</strong>: 自然语言处理</li>
+</ul>
+<p><strong>部署</strong>:<br>安装 NLTK：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nltk</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong>:</p>
+<pre><code class="python">import nltk
+nltk.download(&#39;punkt&#39;)
+
+# 分词
+from nltk.tokenize import word_tokenize
+
+text = &quot;Natural Language Processing with Python.&quot;
+tokens = word_tokenize(text)
+print(tokens)
+</code></pre>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='your-client-id'
+        data-cs='your-client-secret'
+        data-r='your-repo-name'
+        data-o='your-github-username'
+        data-a='your-github-username'
+        data-d=''
+        data-p=''
+    >留言</div>
+
+
+            
+            
+            <div id="vcomments"></div>
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/logo.png" height=300 width=300></img>
+                    <p>小杰</p>
+                    <span>The quieter you become, the more you are able to hear.</span>
+                    <dl>
+                        
+                            
+                                <dd><a href="https://github.com/panan12/panan12.github.io" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">26 <p>文章</p></a></li>
+                    <li><a href="/categories">3 <p>分类</p></a></li>
+                    <li><a href="/tags">24 <p>标签</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python-Libraries-Summary"><span class="toc-number">1.</span> <span class="toc-text">Python Libraries Summary</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-NumPy"><span class="toc-number">1.1.</span> <span class="toc-text">1. NumPy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Pandas"><span class="toc-number">1.2.</span> <span class="toc-text">2. Pandas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Matplotlib"><span class="toc-number">1.3.</span> <span class="toc-text">3. Matplotlib</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-SciPy"><span class="toc-number">1.4.</span> <span class="toc-text">4. SciPy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Scikit-learn"><span class="toc-number">1.5.</span> <span class="toc-text">5. Scikit-learn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-TensorFlow"><span class="toc-number">1.6.</span> <span class="toc-text">6. TensorFlow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Keras"><span class="toc-number">1.7.</span> <span class="toc-text">7. Keras</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Flask"><span class="toc-number">1.8.</span> <span class="toc-text">8. Flask</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Django"><span class="toc-number">1.9.</span> <span class="toc-text">9. Django</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Beautiful-Soup"><span class="toc-number">1.10.</span> <span class="toc-text">10. Beautiful Soup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Requests"><span class="toc-number">1.11.</span> <span class="toc-text">11. Requests</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Pillow"><span class="toc-number">1.12.</span> <span class="toc-text">12. Pillow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-PyTorch"><span class="toc-number">1.13.</span> <span class="toc-text">13. PyTorch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-OpenCV"><span class="toc-number">1.14.</span> <span class="toc-text">14. OpenCV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-NLTK"><span class="toc-number">1.15.</span> <span class="toc-text">15. NLTK</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            小杰
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        
+        </br>
+        <span style="display: inline-block;"> <img src=/null></span>
+        
+        <span class="gradient-text">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602009049" title="www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049" target="_blank" rel="noopener">www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049</a>
+        </span>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['The quieter you become, the more you are able to hear.', '你越安静，你就越能够听见。'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+ 
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var valine = new Valine();
+
+  function initValine(path) {
+    if (!path) path = window.location.pathname;
+    let language = 'zh-CN';
+    if (!language) {
+      language = 'en';
+    } else {
+      language = language.toLowerCase();
+    }
+    valine.init({
+      el: '#vcomments',
+      appId: 'your-app-id',
+      appKey: 'your-app-key',
+      notify: 'false',
+      verify: 'false',
+      avatar: 'mp',
+      placeholder: 'Leave your thoughts behind~',
+      visitor: 'true',
+      path: path,
+      lang: language,
+    });
+  }
+
+  $(document).ready(function () {
+    initValine();
+  });
+</script>
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
