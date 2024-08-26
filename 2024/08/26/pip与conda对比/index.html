@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>pip 和 conda 的区别及在虚拟环境中的选择 - 小杰的博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="FPGA, matlab, linux,"> 
+    <meta name="description" content="欢迎来到小杰的博客,pip 和 conda 的区别及在虚拟环境中的选择1. pip 和 conda 的区别1.1 工具来源和目标用户
+pip：
+
+来源：pip 是 Python 官方推荐的包管理工具，默认安装在 Pyt,"> 
+    <meta name="author" content="小杰"> 
+    <link rel="alternative" href="atom.xml" title="小杰的博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/htop.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">小杰的博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/htop.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">pip 和 conda 的区别及在虚拟环境中的选择</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/8PAS4Gh5.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
+                
+                八月 26, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/08/26/pip%E4%B8%8Econda%E5%AF%B9%E6%AF%94/" title="pip 和 conda 的区别及在虚拟环境中的选择" class="">pip 和 conda 的区别及在虚拟环境中的选择</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                    9.3k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                    8 mins.
+                </span>
+                
+                
+                <span id="/2024/08/26/pip与conda对比/" class="leancloud_visitors" data-flag-title="pip 和 conda 的区别及在虚拟环境中的选择">
+                    <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                    <span class="leancloud-visitors-count">1000000</span>
+                </span>
+                
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/conda/" rel="tag">conda</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/pip/" rel="tag">pip</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" rel="tag">虚拟环境</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="pip-和-conda-的区别及在虚拟环境中的选择"><a href="#pip-和-conda-的区别及在虚拟环境中的选择" class="headerlink" title="pip 和 conda 的区别及在虚拟环境中的选择"></a>pip 和 conda 的区别及在虚拟环境中的选择</h1><h2 id="1-pip-和-conda-的区别"><a href="#1-pip-和-conda-的区别" class="headerlink" title="1. pip 和 conda 的区别"></a>1. pip 和 conda 的区别</h2><h3 id="1-1-工具来源和目标用户"><a href="#1-1-工具来源和目标用户" class="headerlink" title="1.1 工具来源和目标用户"></a>1.1 工具来源和目标用户</h3><ul>
+<li><p><strong>pip</strong>：</p>
+<ul>
+<li><strong>来源</strong>：<code>pip</code> 是 Python 官方推荐的包管理工具，默认安装在 Python 环境中，用于从 Python Package Index (PyPI) 安装 Python 包。</li>
+<li><strong>目标用户</strong>：适用于任何使用 Python 环境的用户，特别是那些希望安装纯 Python 包或由社区维护的包的用户。</li>
+</ul>
+</li>
+<li><p><strong>conda</strong>：</p>
+<ul>
+<li><strong>来源</strong>：<code>conda</code> 是 Anaconda 发行版的一部分，由 Continuum Analytics（现为 Anaconda, Inc.）开发，除了 Python，还支持其他语言的包管理，如 R、JavaScript 等。</li>
+<li><strong>目标用户</strong>：主要面向数据科学家和研究人员，特别是那些希望管理整个环境（包括 Python 版本、依赖库以及非 Python 软件包）的用户。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-包的来源和生态系统"><a href="#1-2-包的来源和生态系统" class="headerlink" title="1.2 包的来源和生态系统"></a>1.2 包的来源和生态系统</h3><ul>
+<li><p><strong>pip</strong>：</p>
+<ul>
+<li><strong>包来源</strong>：<code>pip</code> 安装的包主要来自 Python Package Index (PyPI)。</li>
+<li><strong>生态系统</strong>：<code>pip</code> 仅能安装 Python 包，以及一些包含 C 扩展的包（但这些包的安装可能需要编译环境或预编译的二进制文件）。</li>
+</ul>
+</li>
+<li><p><strong>conda</strong>：</p>
+<ul>
+<li><strong>包来源</strong>：<code>conda</code> 包来自 Anaconda 仓库或 conda-forge 仓库，这些包可以是 Python 包，也可以是其他编程语言或工具的包。</li>
+<li><strong>生态系统</strong>：<code>conda</code> 能安装和管理包含 Python 依赖的包，以及其他系统级依赖，如编译器、库等。它特别适合安装科学计算包（如 <code>numpy</code>, <code>pandas</code>, <code>scipy</code>）和依赖于非 Python 库的软件（如 <code>OpenCV</code>, <code>TensorFlow</code> 等）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-依赖管理"><a href="#1-3-依赖管理" class="headerlink" title="1.3 依赖管理"></a>1.3 依赖管理</h3><ul>
+<li><p><strong>pip</strong>：</p>
+<ul>
+<li><strong>依赖管理</strong>：<code>pip</code> 通过解析 <code>requirements.txt</code> 文件或在安装时解析依赖树来管理包依赖，但不能自动管理和安装某些系统级依赖。如果有版本冲突，<code>pip</code> 可能会安装不兼容的包，导致环境问题。</li>
+</ul>
+</li>
+<li><p><strong>conda</strong>：</p>
+<ul>
+<li><strong>依赖管理</strong>：<code>conda</code> 使用 SAT 求解器来解析和解决包依赖冲突，能够确保环境中所有包的兼容性。它可以管理包括 Python 解释器在内的整个环境，这使得它在处理复杂依赖时更可靠。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-环境管理"><a href="#1-4-环境管理" class="headerlink" title="1.4 环境管理"></a>1.4 环境管理</h3><ul>
+<li><p><strong>pip</strong>：</p>
+<ul>
+<li><strong>环境管理</strong>：<code>pip</code> 本身不管理环境，通常与 <code>venv</code> 或 <code>virtualenv</code> 等工具一起使用来创建虚拟环境。</li>
+</ul>
+</li>
+<li><p><strong>conda</strong>：</p>
+<ul>
+<li><strong>环境管理</strong>：<code>conda</code> 集成了强大的环境管理功能，用户可以轻松创建、克隆、导出和删除独立的环境，并在这些环境中管理不同的 Python 版本和包。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-5-安装速度和大小"><a href="#1-5-安装速度和大小" class="headerlink" title="1.5 安装速度和大小"></a>1.5 安装速度和大小</h3><ul>
+<li><p><strong>pip</strong>：</p>
+<ul>
+<li><strong>安装速度</strong>：<code>pip</code> 安装速度取决于包的大小和依赖关系。对于纯 Python 包，通常较快，但对于包含编译依赖的包（如 <code>numpy</code> 或 <code>scipy</code>），可能需要更多时间。</li>
+</ul>
+</li>
+<li><p><strong>conda</strong>：</p>
+<ul>
+<li><strong>安装速度</strong>：<code>conda</code> 安装通常较快，因为大多数包都以预编译的二进制格式分发，且包含了所有依赖。特别是对于科学计算和数据分析包，<code>conda</code> 通常更快、更稳定。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-6-包的兼容性和稳定性"><a href="#1-6-包的兼容性和稳定性" class="headerlink" title="1.6 包的兼容性和稳定性"></a>1.6 包的兼容性和稳定性</h3><ul>
+<li><p><strong>pip</strong>：</p>
+<ul>
+<li><strong>兼容性</strong>：<code>pip</code> 安装的包可能不与系统上的其他软件兼容，特别是在处理 C 扩展或系统库时可能会遇到问题。</li>
+</ul>
+</li>
+<li><p><strong>conda</strong>：</p>
+<ul>
+<li><strong>兼容性</strong>：<code>conda</code> 包通常更稳定，因为它们经过严格的测试，并且在安装时会确保所有依赖关系的兼容性。这使得 <code>conda</code> 在科学计算领域更加可靠。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-7-使用场景"><a href="#1-7-使用场景" class="headerlink" title="1.7 使用场景"></a>1.7 使用场景</h3><ul>
+<li><p><strong>pip</strong>：</p>
+<ul>
+<li>适用于任何 Python 开发者，尤其是需要从 PyPI 安装包或在轻量级环境中工作的开发者。</li>
+<li>通常与虚拟环境工具（如 <code>venv</code>）一起使用。</li>
+</ul>
+</li>
+<li><p><strong>conda</strong>：</p>
+<ul>
+<li>特别适合数据科学和机器学习的用户，因为它能方便地管理复杂的依赖关系和系统包。</li>
+<li>使用 <code>conda</code> 可以轻松管理不同的 Python 版本和整个开发环境。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-8-总结"><a href="#1-8-总结" class="headerlink" title="1.8 总结"></a>1.8 总结</h3><ul>
+<li><strong>pip</strong> 是一个专注于 Python 包管理的工具，适合一般的 Python 开发工作。</li>
+<li><strong>conda</strong> 是一个通用的包管理和环境管理工具，特别适合需要管理多种依赖和环境的科学计算和数据分析工作。</li>
+</ul>
+<p>如果你主要使用 Python 且不需要管理复杂的系统依赖，<code>pip</code> 就足够了。而如果你从事数据科学、机器学习等领域的工作，<code>conda</code> 可能更适合你的需求。</p>
+<h2 id="2-在虚拟环境中选择-pip-还是-conda"><a href="#2-在虚拟环境中选择-pip-还是-conda" class="headerlink" title="2. 在虚拟环境中选择 pip 还是 conda"></a>2. 在虚拟环境中选择 pip 还是 conda</h2><p>在虚拟环境中，你可以根据你的具体需求选择使用 <code>pip</code> 或 <code>conda</code>：</p>
+<h3 id="2-1-使用-pip-和-venv-或-virtualenv-结合"><a href="#2-1-使用-pip-和-venv-或-virtualenv-结合" class="headerlink" title="2.1 使用 pip 和 venv 或 virtualenv 结合"></a>2.1 使用 <code>pip</code> 和 <code>venv</code> 或 <code>virtualenv</code> 结合</h3><ul>
+<li>如果你的项目主要依赖于纯 Python 包，或者这些包大多来自 PyPI，那么在虚拟环境中使用 <code>pip</code> 是一个很好的选择。</li>
+<li>使用 <code>venv</code> 或 <code>virtualenv</code> 创建虚拟环境后，<code>pip</code> 会自动安装在这个虚拟环境中，你可以直接使用 <code>pip install</code> 安装所需的包。</li>
+</ul>
+<p><strong>创建虚拟环境并使用 <code>pip</code>：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建虚拟环境</span></span><br><span class="line">python -m venv myenv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line"><span class="comment"># Windows</span></span><br><span class="line">myenv\Scripts\activate</span><br><span class="line"><span class="comment"># macOS/Linux</span></span><br><span class="line"><span class="built_in">source</span> myenv/bin/activate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install numpy pandas</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-使用-conda-的虚拟环境"><a href="#2-2-使用-conda-的虚拟环境" class="headerlink" title="2.2 使用 conda 的虚拟环境"></a>2.2 使用 <code>conda</code> 的虚拟环境</h3><ul>
+<li>如果你的项目需要管理不仅限于 Python 的依赖（例如 C 库、编译器、R 语言包等），或者你需要使用一些科学计算包（如 <code>numpy</code>, <code>scipy</code>, <code>tensorflow</code>），<code>conda</code> 会是更好的选择。</li>
+<li><code>conda</code> 的虚拟环境功能强大，可以管理整个环境的依赖，并且支持跨平台的包安装。</li>
+</ul>
+<p><strong>创建和使用 <code>conda</code> 虚拟环境：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建虚拟环境</span></span><br><span class="line">conda create --name myenv python=3.8</span><br><span class="line"></span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line">conda activate myenv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">conda install numpy pandas</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-结合使用-conda-和-pip"><a href="#2-3-结合使用-conda-和-pip" class="headerlink" title="2.3 结合使用 conda 和 pip"></a>2.3 结合使用 <code>conda</code> 和 <code>pip</code></h3><ul>
+<li>你也可以在 <code>conda</code> 虚拟环境中使用 <code>pip</code> 安装某些特定的包。通常，你可以先用 <code>conda</code> 安装主要的包，再用 <code>pip</code> 安装 <code>conda</code> 没有的特定包。</li>
+</ul>
+<p><strong>在 <code>conda</code> 环境中使用 <code>pip</code>：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建并激活 conda 虚拟环境</span></span><br><span class="line">conda create --name myenv python=3.8</span><br><span class="line">conda activate myenv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 conda 安装主要包</span></span><br><span class="line">conda install numpy pandas</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 pip 安装其他包</span></span><br><span class="line">pip install some_package_not_in_conda</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-总结"><a href="#2-4-总结" class="headerlink" title="2.4 总结"></a>2.4 总结</h3><ul>
+<li><strong>简单项目</strong>：如果你的项目依赖简单，且主要使用纯 Python 包，可以使用 <code>pip</code> 和 <code>venv</code> 或 <code>virtualenv</code>。</li>
+<li><strong>复杂项目</strong>：如果你的项目涉及多个依赖库（特别是非 Python 的库），使用 <code>conda</code> 会更方便和稳定。</li>
+<li><strong>混合需求</strong>：你可以在 <code>conda</code> 环境中结合使用 <code>pip</code>，先用 <code>conda</code> 安装大部分包，再用 <code>pip</code> 安装一些 <code>conda</code> 没有的包。</li>
+</ul>
+<p>根据你的具体需求选择合适的工具，能让你的开发工作更顺利。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='your-client-id'
+        data-cs='your-client-secret'
+        data-r='your-repo-name'
+        data-o='your-github-username'
+        data-a='your-github-username'
+        data-d=''
+        data-p=''
+    >留言</div>
+
+
+            
+            
+            <div id="vcomments"></div>
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/logo.png" height=300 width=300></img>
+                    <p>小杰</p>
+                    <span>The quieter you become, the more you are able to hear.</span>
+                    <dl>
+                        
+                            
+                                <dd><a href="https://github.com/panan12/panan12.github.io" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">27 <p>文章</p></a></li>
+                    <li><a href="/categories">3 <p>分类</p></a></li>
+                    <li><a href="/tags">27 <p>标签</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pip-%E5%92%8C-conda-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E5%9C%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-number">1.</span> <span class="toc-text">pip 和 conda 的区别及在虚拟环境中的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-pip-%E5%92%8C-conda-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.</span> <span class="toc-text">1. pip 和 conda 的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%B7%A5%E5%85%B7%E6%9D%A5%E6%BA%90%E5%92%8C%E7%9B%AE%E6%A0%87%E7%94%A8%E6%88%B7"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 工具来源和目标用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%8C%85%E7%9A%84%E6%9D%A5%E6%BA%90%E5%92%8C%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 包的来源和生态系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 依赖管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 环境管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.5 安装速度和大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E5%8C%85%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E5%92%8C%E7%A8%B3%E5%AE%9A%E6%80%A7"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.6 包的兼容性和稳定性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.7.</span> <span class="toc-text">1.7 使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-%E6%80%BB%E7%BB%93"><span class="toc-number">1.1.8.</span> <span class="toc-text">1.8 总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9C%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%AD%E9%80%89%E6%8B%A9-pip-%E8%BF%98%E6%98%AF-conda"><span class="toc-number">1.2.</span> <span class="toc-text">2. 在虚拟环境中选择 pip 还是 conda</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%BD%BF%E7%94%A8-pip-%E5%92%8C-venv-%E6%88%96-virtualenv-%E7%BB%93%E5%90%88"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 使用 pip 和 venv 或 virtualenv 结合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E4%BD%BF%E7%94%A8-conda-%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 使用 conda 的虚拟环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8-conda-%E5%92%8C-pip"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 结合使用 conda 和 pip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 总结</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            小杰
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        
+        </br>
+        <span style="display: inline-block;"> <img src=/null></span>
+        
+        <span class="gradient-text">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602009049" title="www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049" target="_blank" rel="noopener">www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049</a>
+        </span>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['The quieter you become, the more you are able to hear.', '你越安静，你就越能够听见。'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+ 
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var valine = new Valine();
+
+  function initValine(path) {
+    if (!path) path = window.location.pathname;
+    let language = 'zh-CN';
+    if (!language) {
+      language = 'en';
+    } else {
+      language = language.toLowerCase();
+    }
+    valine.init({
+      el: '#vcomments',
+      appId: 'your-app-id',
+      appKey: 'your-app-key',
+      notify: 'false',
+      verify: 'false',
+      avatar: 'mp',
+      placeholder: 'Leave your thoughts behind~',
+      visitor: 'true',
+      path: path,
+      lang: language,
+    });
+  }
+
+  $(document).ready(function () {
+    initValine();
+  });
+</script>
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
