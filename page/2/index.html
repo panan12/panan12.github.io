@@ -128,23 +128,23 @@
             八月 27, 2024
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/2024/08/27/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" title="逆向工程详解" class="posttitle">逆向工程详解</a></h3>
+            <a href="/2024/08/27/k8s/" title="Kubernetes详解" class="posttitle">Kubernetes详解</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                4.1k
+                11k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                4 mins.
+                10 mins.
             </span>
             
             
-            <span id="/2024/08/27/逆向工程/" class="leancloud_visitors" data-flag-title="">
+            <span id="/2024/08/27/k8s/" class="leancloud_visitors" data-flag-title="">
                 <b class="iconfont icon-read"></b> <i>阅读次数</i>
                 <span class="leancloud-visitors-count">1000000</span>
             </span>
@@ -152,14 +152,14 @@
         </p>
         
         
-        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%A1%AC%E4%BB%B6%E5%88%86%E6%9E%90/" rel="tag">硬件分析</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/" rel="tag">软件分析</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" rel="tag">逆向工程</a></li></ul>
+        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" rel="tag">云计算</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92/" rel="tag">容器编排</a></li></ul>
         
         <div class="md-content animated fadeIn">
             
-            逆向工程详解引言逆向工程（Reverse Engineering）是一种旨在了解系统设计原理和功能实现的技术过程。它通过分析现有产品或系统的结构、功能和操作方式，推测出设计信息或提取关键数据。这一过程在软件分析、硬件仿制、协议分析等领域有着广泛应用。本文将深入探讨逆向工程的定义、应用领域、实现步骤及其合法性等内容。
-什么是逆向工程逆向工程是从一个现有的成品开始，通过分析和研究，逐步推导出其设...
+            Kubernetes详解引言Kubernetes，简称K8s，是一个开源的容器编排平台，用于自动化部署、扩展和管理容器化应用程序。它最早由Google设计，后来在2014年以开源形式发布，如今已成为现代云计算和微服务架构中不可或缺的工具。本文将详细介绍Kubernetes的核心概念、功能、应用场景以及其在现代软件开发中的重要性。
+什么是KubernetesKubernetes的设计初衷是为了...
             
-            <span class="read-more"><a href="/2024/08/27/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" title="查看全文" class="posttitle">查看全文</a>
+            <span class="read-more"><a href="/2024/08/27/k8s/" title="查看全文" class="posttitle">查看全文</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -180,6 +180,122 @@
 
     <div id="primary">
         
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/light.png);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/技术解析">
+                  <b>「 </b>技术解析<b> 」</b>
+                </a>
+            
+            八月 27, 2024
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2024/08/27/k8s/" title="Kubernetes详解" class="posttitle">Kubernetes详解</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        11k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        10 mins.
+                    </span>
+                
+                
+                    <span id="/2024/08/27/k8s/" class="leancloud_visitors" data-flag-title="">
+                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                        <span class="leancloud-visitors-count">1000000</span>
+                    </span>
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" rel="tag">云计算</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92/" rel="tag">容器编排</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                Kubernetes详解引言Kubernetes，简称K8s，是一个开源的容器编排平台，用于自动化部署、扩展和管理容器化应用程序。它最早由Google设计，后来在2014年以开源形式发布，如今已成为现代云计算和微服务架构中不可或缺的工具。本文将详细介绍Kubernetes的核心概念、功能、应用场景以及其在现代软件开发中的重要性。
+什么是KubernetesKubernetes的设计初衷是为了帮助开发者和运维人员更好地管理复杂的容器化应用。它通过提供自动化的部署、扩展、负载均衡、自我修复等功能，简化了应用的生命周期管理。在Kubernetes中，应用程序被打包为容器，容器之间的管理则通过各种Kubernetes资源对象来实现。
+Kubernetes的命名来源于希腊语中的“舵手”或“领航员”，这个名字恰如其分地描述了它在现代应用程序管理中的角色——引导和控制容器化应用程序的运行。
+Kubernetes 的核心概念容器（Container）容器是Kubernetes中最基本的单元，它将应用程序及其所有依赖环境封装在一起。容器可以在任何支持容器运行时的环境中执行，这使得应用程序的开发、测...
+            
+            <span class="read-more"><a href="/2024/08/27/k8s/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/light.png);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/目标检测">
+                  <b>「 </b>目标检测<b> 」</b>
+                </a>
+            
+            八月 27, 2024
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2024/08/27/yolov10/" title="YOLOv10介绍及使用" class="posttitle">YOLOv10介绍及使用</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        2.8k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        3 mins.
+                    </span>
+                
+                
+                    <span id="/2024/08/27/yolov10/" class="leancloud_visitors" data-flag-title="">
+                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                        <span class="leancloud-visitors-count">1000000</span>
+                    </span>
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/YOLO/" rel="tag">YOLO</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" rel="tag">计算机视觉</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                YOLOv10 简介1. 发展背景YOLOv10 是 YOLO 系列的第十代版本，其主要目标是进一步提高目标检测的速度和精度。随着计算机视觉任务的复杂性增加，YOLOv10 在保持高速检测的同时，通过改进模型结构和训练策略，解决了以往版本中存在的一些问题，如小目标检测效果不佳、多尺度检测的不足等。
+2. YOLOv10 的核心思想YOLOv10 采用 YOLO 系列的单次检测方法，即将输入图片分成网格，然后对每个网格进行分类和边界框回归。与之前的版本相比，YOLOv10 在网络架构上做了一些优化，使其能够更好地捕捉图像中的细节信息，提高了小目标的检测精度。
+YOLOv10 的主要改进
+更深的网络结构：YOLOv10 引入了更深的网络结构，以捕获更多的特征层级，从而提升模型的表达能力。
+
+多尺度检测：改进的多尺度检测策略使得 YOLOv10 在检测小目标时更加准确。
+
+改进的损失函数：引入了新的损失函数，更加关注分类准确性和定位精度。
+
+优化的 Anchor 机制：优化了 Anchor 的生成机制，减少了不必要的计算开销，并提升了模型的整体效率。
+
+使用新的激活函数：引入了更适合目...
+            
+            <span class="read-more"><a href="/2024/08/27/yolov10/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
 <div class="post" id="post">
     <div class="post-cover animated fadeIn" style="
             background-image:
@@ -435,146 +551,6 @@ MATLAB 对变量名大小写敏感。
 字符串：str = &#39;Hel...
             
             <span class="read-more"><a href="/2024/08/26/matlab/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/light.png);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/编程">
-                  <b>「 </b>编程<b> 」</b>
-                </a>
-            
-            八月 26, 2024
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2024/08/26/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="Python 语法总览" class="posttitle">Python 语法总览</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                        18k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                        16 mins.
-                    </span>
-                
-                
-                    <span id="/2024/08/26/python基础学习/" class="leancloud_visitors" data-flag-title="">
-                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
-                        <span class="leancloud-visitors-count">1000000</span>
-                    </span>
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                Python 语法总览Python 是一种功能强大且易于学习的编程语言，涵盖了从基本的语法到高级的编程范式。以下是 Python 的所有主要语法和概念的概述，按主题分类。
-1. 基础语法
-变量与数据类型：
-
-变量赋值：x = 10
-数据类型：int、float、str、bool
-类型转换：int(&quot;10&quot;)、str(10)
-
-
-运算符：
-
-算术运算符：+、-、*、/、%、//（整除）、**（幂运算）
-比较运算符：==、!=、&gt;、&lt;、&gt;=、&lt;=
-逻辑运算符：and、or、not
-赋值运算符：=、+=、-=、*=、/= 等
-
-
-条件语句：
-
-if、elif、else 用于控制程序的流程。123456if x &gt; 10:    print(&quot;x is greater than 10&quot;)elif x == 10:    print(&quot;x is 10&quot;)else:    print(&quot;x is less than 10&quot;)
-
-
-循环：
-
-for 循环：用于遍历序列。12for i ...
-            
-            <span class="read-more"><a href="/2024/08/26/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/light.png);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
-            
-            八月 25, 2024
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2024/08/25/vscode%E9%85%8D%E7%BD%AEjson/" title="vscode配置json" class="posttitle">vscode配置json</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                        5.2k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                        5 mins.
-                    </span>
-                
-                
-                    <span id="/2024/08/25/vscode配置json/" class="leancloud_visitors" data-flag-title="">
-                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
-                        <span class="leancloud-visitors-count">1000000</span>
-                    </span>
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                1. Visual Studio Code 官方文档   官方文档是了解如何开发 VS Code 扩展的最佳资源，包括如何配置 settings.json 等内容。你可以通过以下链接访问：
-
-VS Code 官方文档 - 扩展 API
-VS Code 官方文档 - 配置扩展
-
-2. API 参考文档   详细的 API 文档可以帮助你了解如何使用 VS Code 提供的 API，例如配置管理、工作区管理、编辑器扩展等：
-
-VS Code API 参考文档
-
-3. GitHub 示例仓库   VS Code 官方 GitHub 仓库中有很多示例和社区提供的扩展代码，可以帮助你学习如何编写和配置扩展：
-
-VS Code 官方 GitHub 仓库
-
-4. 社区和论坛   你也可以在 Stack Overflow 或者 VS Code 的官方论坛上提问和搜索，了解其他开发者在编写扩展时的实践经验：
-
-Stack Overflow
-VS Code 官方 GitHub 讨论区
-
-5. VS Code 插件市场   在 VS Code 插件市场中浏览其他开发者的扩展，有些扩展的文档和代码库也会...
-            
-            <span class="read-more"><a href="/2024/08/25/vscode%E9%85%8D%E7%BD%AEjson/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>

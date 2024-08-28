@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>随机信号分析 - 小杰的博客</title>
+    <title>MC实现局域网连接原理 - 小杰的博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="FPGA, matlab, linux,"> 
-    <meta name="description" content="欢迎来到小杰的博客,"> 
+    <meta name="description" content="欢迎来到小杰的博客,Minecraft可以通过局域网加入到别人的游戏主要是由于以下几个技术机制的共同作用：
+1. 局域网的共享网络环境局域网（Local Area Network, LAN）是一个共享的网络环境，所有连,"> 
     <meta name="author" content="小杰"> 
     <link rel="alternative" href="atom.xml" title="小杰的博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/htop.png"> 
@@ -74,7 +75,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/htop.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">随机信号分析</h3>
+        <h3 class="subtitle">MC实现局域网连接原理</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -106,26 +107,26 @@
                 
                 <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
                 
-                八月 25, 2024
+                八月 28, 2024
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2024/08/25/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90/" title="随机信号分析" class="">随机信号分析</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/08/28/MC%E5%AE%9E%E7%8E%B0%E5%B1%80%E5%9F%9F%E7%BD%91%E8%BF%9E%E6%8E%A5%E5%8E%9F%E7%90%86/" title="MC实现局域网连接原理" class="">MC实现局域网连接原理</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    0
+                    1.7k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    2 mins.
                 </span>
                 
                 
-                <span id="/2024/08/25/随机信号分析/" class="leancloud_visitors" data-flag-title="随机信号分析">
+                <span id="/2024/08/28/MC实现局域网连接原理/" class="leancloud_visitors" data-flag-title="MC实现局域网连接原理">
                     <b class="iconfont icon-read"></b> <i>阅读次数</i>
                     <span class="leancloud-visitors-count">1000000</span>
                 </span>
@@ -153,7 +154,20 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            
+            <p><strong>Minecraft</strong>可以通过局域网加入到别人的游戏主要是由于以下几个技术机制的共同作用：</p>
+<h3 id="1-局域网的共享网络环境"><a href="#1-局域网的共享网络环境" class="headerlink" title="1. 局域网的共享网络环境"></a>1. <strong>局域网的共享网络环境</strong></h3><p>局域网（Local Area Network, LAN）是一个共享的网络环境，所有连接到同一局域网的设备都可以互相通信。这意味着当某个设备在局域网中启动一个Minecraft游戏并开启局域网联机功能时，其他设备能够“看到”这个游戏，并有机会与其建立连接。</p>
+<h3 id="2-Minecraft的局域网游戏广播机制"><a href="#2-Minecraft的局域网游戏广播机制" class="headerlink" title="2. Minecraft的局域网游戏广播机制"></a>2. <strong>Minecraft的局域网游戏广播机制</strong></h3><p>当一个玩家在Minecraft中选择“打开局域网”选项时，Minecraft会在后台执行以下操作：</p>
+<ul>
+<li><p><strong>启动一个局域网服务器</strong>: 该玩家的设备开始充当一个本地服务器，管理其他玩家的连接和游戏世界的状态。</p>
+</li>
+<li><p><strong>发送UDP广播</strong>: Minecraft通过UDP协议向局域网中所有设备广播这个服务器的可用性。这个广播消息中包含了服务器的IP地址、端口号和一些关于游戏世界的基本信息（例如游戏模式、允许的玩家数量等）。</p>
+</li>
+</ul>
+<h3 id="3-自动发现与连接机制"><a href="#3-自动发现与连接机制" class="headerlink" title="3. 自动发现与连接机制"></a>3. <strong>自动发现与连接机制</strong></h3><p>局域网内的其他设备在接收到广播消息后，Minecraft会自动在游戏界面中显示这个局域网服务器。如果玩家想加入这个游戏，他们只需点击显示的局域网游戏列表中的世界，客户端会自动使用提供的IP地址和端口号尝试连接到该局域网服务器。</p>
+<h3 id="4-TCP-IP协议进行游戏数据的同步"><a href="#4-TCP-IP协议进行游戏数据的同步" class="headerlink" title="4. TCP&#x2F;IP协议进行游戏数据的同步"></a>4. <strong>TCP&#x2F;IP协议进行游戏数据的同步</strong></h3><p>一旦客户端成功连接到服务器，Minecraft使用TCP&#x2F;IP协议在客户端和服务器之间同步游戏数据。这包括玩家的位置、动作、世界状态等信息。局域网内的低延迟和高带宽使得这些数据同步非常快速，确保了游戏的流畅体验。</p>
+<h3 id="5-无复杂配置要求"><a href="#5-无复杂配置要求" class="headerlink" title="5. 无复杂配置要求"></a>5. <strong>无复杂配置要求</strong></h3><p>与互联网联机不同，局域网联机通常不需要配置路由器的端口转发，也不涉及防火墙设置的问题。这是因为局域网内的设备通常被视为在同一信任域内，可以直接通信。这种简化的配置进一步降低了玩家通过局域网加入游戏的门槛。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Minecraft能够通过局域网加入别人的游戏，归因于局域网的共享网络环境、游戏的广播发现机制，以及简化的连接流程。玩家在局域网中可以通过自动发现和直接连接功能，轻松加入由他人主机创建的游戏世界。</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
@@ -214,6 +228,13 @@
             </div>
             
             
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">1. 局域网的共享网络环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Minecraft%E7%9A%84%E5%B1%80%E5%9F%9F%E7%BD%91%E6%B8%B8%E6%88%8F%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6"><span class="toc-number">2.</span> <span class="toc-text">2. Minecraft的局域网游戏广播机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%87%AA%E5%8A%A8%E5%8F%91%E7%8E%B0%E4%B8%8E%E8%BF%9E%E6%8E%A5%E6%9C%BA%E5%88%B6"><span class="toc-number">3.</span> <span class="toc-text">3. 自动发现与连接机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-TCP-IP%E5%8D%8F%E8%AE%AE%E8%BF%9B%E8%A1%8C%E6%B8%B8%E6%88%8F%E6%95%B0%E6%8D%AE%E7%9A%84%E5%90%8C%E6%AD%A5"><span class="toc-number">4.</span> <span class="toc-text">4. TCP&#x2F;IP协议进行游戏数据的同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%97%A0%E5%A4%8D%E6%9D%82%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82"><span class="toc-number">5.</span> <span class="toc-text">5. 无复杂配置要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
+                </div>
+            </div>
             
             
         </div>
