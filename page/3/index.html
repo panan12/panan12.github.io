@@ -124,26 +124,26 @@
             
             <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
             
-            八月 27, 2024
+            八月 28, 2024
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/2024/08/27/%E9%BB%91%E7%8C%B4%E5%AD%90/" title="黑猴子" class="posttitle">黑猴子</a></h3>
+            <a href="/2024/08/28/MC%E5%AE%9E%E7%8E%B0%E5%B1%80%E5%9F%9F%E7%BD%91%E8%BF%9E%E6%8E%A5%E5%8E%9F%E7%90%86/" title="MC实现局域网连接原理" class="posttitle">MC实现局域网连接原理</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                51
+                1.7k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                1 mins.
+                2 mins.
             </span>
             
             
-            <span id="/2024/08/27/黑猴子/" class="leancloud_visitors" data-flag-title="">
+            <span id="/2024/08/28/MC实现局域网连接原理/" class="leancloud_visitors" data-flag-title="">
                 <b class="iconfont icon-read"></b> <i>阅读次数</i>
                 <span class="leancloud-visitors-count">1000000</span>
             </span>
@@ -153,10 +153,11 @@
         
         <div class="md-content animated fadeIn">
             
+            Minecraft可以通过局域网加入到别人的游戏主要是由于以下几个技术机制的共同作用：
+1. 局域网的共享网络环境局域网（Local Area Network, LAN）是一个共享的网络环境，所有连接到同一局域网的设备都可以互相通信。这意味着当某个设备在局域网中启动一个Minecraft游戏并开启局域网联机功能时，其他设备能够“看到”这个游戏，并有机会与其建立连接。
+2. Minecraft...
             
-
-            
-            <span class="read-more"><a href="/2024/08/27/%E9%BB%91%E7%8C%B4%E5%AD%90/" title="查看全文" class="posttitle">查看全文</a>
+            <span class="read-more"><a href="/2024/08/28/MC%E5%AE%9E%E7%8E%B0%E5%B1%80%E5%9F%9F%E7%BD%91%E8%BF%9E%E6%8E%A5%E5%8E%9F%E7%90%86/" title="查看全文" class="posttitle">查看全文</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -177,6 +178,121 @@
 
     <div id="primary">
         
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/light.png);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
+            
+            八月 28, 2024
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2024/08/28/MC%E5%AE%9E%E7%8E%B0%E5%B1%80%E5%9F%9F%E7%BD%91%E8%BF%9E%E6%8E%A5%E5%8E%9F%E7%90%86/" title="MC实现局域网连接原理" class="posttitle">MC实现局域网连接原理</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        1.7k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        2 mins.
+                    </span>
+                
+                
+                    <span id="/2024/08/28/MC实现局域网连接原理/" class="leancloud_visitors" data-flag-title="">
+                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                        <span class="leancloud-visitors-count">1000000</span>
+                    </span>
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                Minecraft可以通过局域网加入到别人的游戏主要是由于以下几个技术机制的共同作用：
+1. 局域网的共享网络环境局域网（Local Area Network, LAN）是一个共享的网络环境，所有连接到同一局域网的设备都可以互相通信。这意味着当某个设备在局域网中启动一个Minecraft游戏并开启局域网联机功能时，其他设备能够“看到”这个游戏，并有机会与其建立连接。
+2. Minecraft的局域网游戏广播机制当一个玩家在Minecraft中选择“打开局域网”选项时，Minecraft会在后台执行以下操作：
+
+启动一个局域网服务器: 该玩家的设备开始充当一个本地服务器，管理其他玩家的连接和游戏世界的状态。
+
+发送UDP广播: Minecraft通过UDP协议向局域网中所有设备广播这个服务器的可用性。这个广播消息中包含了服务器的IP地址、端口号和一些关于游戏世界的基本信息（例如游戏模式、允许的玩家数量等）。
+
+
+3. 自动发现与连接机制局域网内的其他设备在接收到广播消息后，Minecraft会自动在游戏界面中显示这个局域网服务器。如果玩家想加入这个游戏，他们只需点击显示的局域网游戏...
+            
+            <span class="read-more"><a href="/2024/08/28/MC%E5%AE%9E%E7%8E%B0%E5%B1%80%E5%9F%9F%E7%BD%91%E8%BF%9E%E6%8E%A5%E5%8E%9F%E7%90%86/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/light.png);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
+            
+            八月 28, 2024
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2024/08/28/android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" title="使用Flutter开发Android应用的完整指南" class="posttitle">使用Flutter开发Android应用的完整指南</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        29k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        26 mins.
+                    </span>
+                
+                
+                    <span id="/2024/08/28/android应用开发/" class="leancloud_visitors" data-flag-title="">
+                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                        <span class="leancloud-visitors-count">1000000</span>
+                    </span>
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Dart/" rel="tag">Dart</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" rel="tag">开发指南</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                在移动应用开发领域，Flutter作为一个跨平台框架，以其高效的开发流程和优美的UI设计能力，受到了广泛的欢迎。本文将详细介绍使用Flutter开发Android应用的步骤、相关语法介绍以及Flutter框架的文件结构和开发时的注意事项。
+使用Flutter开发Android实时温度显示软件的步骤1. 准备开发环境在开发Flutter应用之前，首先需要准备好开发环境：
+
+安装Flutter SDK: 从Flutter的官方网站下载并安装适合你操作系统的Flutter SDK。
+安装Android Studio: Android Studio提供了必要的Android开发工具，包括Android SDK和一个功能齐全的IDE。
+设置环境变量: 将Flutter SDK路径添加到系统的PATH环境变量中，以便在命令行中使用flutter命令。
+配置Android设备: 可以使用真实设备或Android模拟器进行开发和测试。确保设备连接正确，并开启开发者模式和USB调试。
+
+2. 创建Flutter项目接下来，创建一个新的Flutter项目：
+
+创建新项目: 使用命令flutter c...
+            
+            <span class="read-more"><a href="/2024/08/28/android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
 <div class="post" id="post">
     <div class="post-cover animated fadeIn" style="
             background-image:
@@ -420,122 +536,6 @@ Flutter 的核心特点
 Flutter 的架构Flutter 的架构主要分为以下几个...
             
             <span class="read-more"><a href="/2024/08/27/flutter%E7%9A%84%E4%BD%BF%E7%94%A8/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/light.png);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/技术解析">
-                  <b>「 </b>技术解析<b> 」</b>
-                </a>
-            
-            八月 27, 2024
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2024/08/27/k8s/" title="Kubernetes详解" class="posttitle">Kubernetes详解</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                        11k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                        10 mins.
-                    </span>
-                
-                
-                    <span id="/2024/08/27/k8s/" class="leancloud_visitors" data-flag-title="">
-                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
-                        <span class="leancloud-visitors-count">1000000</span>
-                    </span>
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" rel="tag">云计算</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92/" rel="tag">容器编排</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                Kubernetes详解引言Kubernetes，简称K8s，是一个开源的容器编排平台，用于自动化部署、扩展和管理容器化应用程序。它最早由Google设计，后来在2014年以开源形式发布，如今已成为现代云计算和微服务架构中不可或缺的工具。本文将详细介绍Kubernetes的核心概念、功能、应用场景以及其在现代软件开发中的重要性。
-什么是KubernetesKubernetes的设计初衷是为了帮助开发者和运维人员更好地管理复杂的容器化应用。它通过提供自动化的部署、扩展、负载均衡、自我修复等功能，简化了应用的生命周期管理。在Kubernetes中，应用程序被打包为容器，容器之间的管理则通过各种Kubernetes资源对象来实现。
-Kubernetes的命名来源于希腊语中的“舵手”或“领航员”，这个名字恰如其分地描述了它在现代应用程序管理中的角色——引导和控制容器化应用程序的运行。
-Kubernetes 的核心概念容器（Container）容器是Kubernetes中最基本的单元，它将应用程序及其所有依赖环境封装在一起。容器可以在任何支持容器运行时的环境中执行，这使得应用程序的开发、测...
-            
-            <span class="read-more"><a href="/2024/08/27/k8s/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/light.png);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/目标检测">
-                  <b>「 </b>目标检测<b> 」</b>
-                </a>
-            
-            八月 27, 2024
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2024/08/27/yolov10/" title="YOLOv10介绍及使用" class="posttitle">YOLOv10介绍及使用</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                        2.8k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                        3 mins.
-                    </span>
-                
-                
-                    <span id="/2024/08/27/yolov10/" class="leancloud_visitors" data-flag-title="">
-                        <b class="iconfont icon-read"></b> <i>阅读次数</i>
-                        <span class="leancloud-visitors-count">1000000</span>
-                    </span>
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/YOLO/" rel="tag">YOLO</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" rel="tag">计算机视觉</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                YOLOv10 简介1. 发展背景YOLOv10 是 YOLO 系列的第十代版本，其主要目标是进一步提高目标检测的速度和精度。随着计算机视觉任务的复杂性增加，YOLOv10 在保持高速检测的同时，通过改进模型结构和训练策略，解决了以往版本中存在的一些问题，如小目标检测效果不佳、多尺度检测的不足等。
-2. YOLOv10 的核心思想YOLOv10 采用 YOLO 系列的单次检测方法，即将输入图片分成网格，然后对每个网格进行分类和边界框回归。与之前的版本相比，YOLOv10 在网络架构上做了一些优化，使其能够更好地捕捉图像中的细节信息，提高了小目标的检测精度。
-YOLOv10 的主要改进
-更深的网络结构：YOLOv10 引入了更深的网络结构，以捕获更多的特征层级，从而提升模型的表达能力。
-
-多尺度检测：改进的多尺度检测策略使得 YOLOv10 在检测小目标时更加准确。
-
-改进的损失函数：引入了新的损失函数，更加关注分类准确性和定位精度。
-
-优化的 Anchor 机制：优化了 Anchor 的生成机制，减少了不必要的计算开销，并提升了模型的整体效率。
-
-使用新的激活函数：引入了更适合目...
-            
-            <span class="read-more"><a href="/2024/08/27/yolov10/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
